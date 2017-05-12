@@ -1,6 +1,10 @@
 ### 一个微信小程序的编译器
 
+#### 安装
+```
+npm install wechat-mina-loader
 
+```
 
 #### webpack.config
 ```javascript
@@ -9,7 +13,7 @@ module.exports = {
     rules: [
       {
         test: /\.mina$/,
-        loader: 'mina-loader',
+        loader: 'wechat-mina-loader',
         options: {
           path: path.resolve(__dirname, 'dist'),
           dist: './dist'

@@ -1,6 +1,6 @@
 {
-  "name": "mina-loader",
-  "version": "0.0.1",
+  "name": "wechat-mina-loader",
+  "version": "0.0.2",
   "description": "a mina components loader for webpack",
   "main": "index.js",
   "scripts": {
