@@ -14,10 +14,7 @@ module.exports = {
     rules: [
       {
         test: /\.mina$/,
-        loader: 'wechat-mina-loader',
-        options: {
-          path: path.resolve(__dirname, 'dist') //生成文件夹的路径
-        }
+        loader: 'wechat-mina-loader'
       }
     ]
   }
