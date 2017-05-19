@@ -1,12 +1,13 @@
-### 一个微信小程序的编译器
+# 一个微信小程序的编译器
+----
 
-#### 安装
+## 安装
 ```
 npm install wechat-mina-loader
 
 ```
 
-#### webpack.config
+## webpack.config
 ```javascript
 module.exports = {
   module: {
@@ -23,9 +24,9 @@ module.exports = {
 }
 ```
 
-#### 使用方式
+## 使用方式
 
-#### 最简单的姿势
+### 最简单的姿势
 
 
 
@@ -43,13 +44,13 @@ require('./pages/index/index.mina')
 
 比起返回 babel 转换过的 script 标签中的内容
 
-#### 关于语法
+### 关于语法
 由于使用的是 vue-template-compiler 进行解析，所以语法基本与 vue-loader，相同
 
 比如你想用 pug，那么在 template 标签中加入 `lang="pug"` 即可
 
 
-#### 高亮设置
+### 高亮设置
 
 将高亮设置为 vuecomponent 即可
 
