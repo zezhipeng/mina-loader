@@ -1,17 +1,17 @@
-const parse = require('./util/parse')
 const loaderUtils = require('loader-utils')
-const renderWxml = require('./lib/renderWxml')
-const renderWxss = require('./lib/renderWxss')
-const renderJs = require('./lib/renderJs')
+const renderWxml = require('./lib/render-wxml')
+const renderWxss = require('./lib/render-wxss')
+const renderScript = require('./lib/render-script')
+const { parseComponent } = require('vue-template-compiler')
 
 module.exports = function (content) {
   this.cacheable()
+  var cb = this.async()
 
-  const str = parse(content)
+  const parts = parseComponent(content)
 
-  renderWxml.call(this, str.html)
-  renderWxss.call(this, str.style)
-  renderJs.call(this, str.script)
-
-  return ``
+  renderWxml.call(this, parts.template)
+  renderWxss.call(this, parts.styles[0])
+  renderScript.call(this, parts.script, cb)
 }
+

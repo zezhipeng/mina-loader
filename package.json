@@ -1,6 +1,6 @@
 {
   "name": "wechat-mina-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a mina components loader for webpack",
   "main": "index.js",
   "scripts": {
@@ -18,16 +18,28 @@
   "bugs": {
     "url": "https://github.com/zezhipeng/mina-loader/issues"
   },
+  "babel": {
+    "babelrc": false,
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ]
+    ]
+  },
   "devDependencies": {
-    "json-loader": "^0.5.4",
+    "babel-core": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "consolidate": "^0.14.5",
+    "fs-extra": "^3.0.1",
     "loader-utils": "^1.1.0",
-    "pug-loader": "^2.3.0",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1"
+    "lodash": "^4.17.4",
+    "vue-template-compiler": "^2.3.3"
   },
   "dependencies": {
-    "fs-extra": "^3.0.1",
-    "pug": "^2.0.0-rc.1"
+    "fs-extra": "^3.0.1"
   },
   "homepage": "https://github.com/zezhipeng/mina-loader#readme"
 }
