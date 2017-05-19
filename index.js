@@ -9,9 +9,16 @@ module.exports = function (content) {
   var cb = this.async()
 
   const parts = parseComponent(content)
-
-  renderWxml.call(this, parts.template)
-  renderWxss.call(this, parts.styles[0])
-  renderScript.call(this, parts.script, cb)
+  if (parts.template) {
+    renderWxml.call(this, parts.template)  
+  }
+  if (parts.styles && parts.styles.length) {
+    renderWxss.call(this, parts.styles[0])  
+  }
+  if (parts.script) {
+    renderScript.call(this, parts.script, cb)
+  } else {
+    cb(null, '')
+  }
 }
 
